@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: afss-backend
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: bash start.sh
+    envVars:
+      - key: R2_PUBLIC_URL
+        value: https://pub-31d818a93d26409282a93383619442b2.r2.dev
+      - key: R2_ENDPOINT
+        value: https://87b7b42bff883ddd96c096f9a89a5732.r2.cloudflarestorage.com
+      - key: R2_BUCKET
+        value: afss-attachments
+      - key: R2_ACCESS_KEY_ID
+        sync: false
+      - key: R2_SECRET_ACCESS_KEY
+        sync: false

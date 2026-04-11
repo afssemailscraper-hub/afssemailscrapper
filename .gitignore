@@ -1,0 +1,6 @@
+database.sqlite
+attachments/
+__pycache__/
+*.pyc
+.env
+*.db
