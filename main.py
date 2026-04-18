@@ -98,7 +98,7 @@ def get_emails(owner: str, page: int = 1, limit: int = 50, folder: str = "", sea
     conn = get_db()
     cursor = conn.cursor()
 
-    base = "SELECT id, message_id, subject, sender, date, folder FROM emails WHERE owner_email = ?"
+    base = "SELECT id, message_id, subject, sender, recipient, date, folder FROM emails WHERE owner_email = ?"
     params = [owner]
 
     if folder:
